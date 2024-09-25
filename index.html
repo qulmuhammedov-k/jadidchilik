@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadidchilik</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loading-screen">
+        <!-- Yuklanish vaqtida ko'rsatiladigan video -->
+        <video id="countdown-video" autoplay muted>
+            <source src="./assets/videos/3c0b4db56fbd9887f2a59168329b2af8.mp4" type="video/mp4">
+            Sizning brauzeringiz videoni qo'llab-quvvatlamaydi.
+        </video>
+    </div>
+    <div id="main-content" style="display:none;">
+        <!-- Asosiy kontentingiz shu yerda bo'ladi -->
+         
+    </div>
+    <div class="header hide">
+        <h4 class="header__logo">
+            Jadidchilik
+        </h4>
+        <ul class="header__ul">
+            <li class="header__ul--li">Jadidlar</li>
+            <li class="header__ul--li">Ahamiyati</li>
+            <li class="header__ul--li">Biografiyasi</li>
+            <li class="header__ul--li">Yakunlanishi</li>
+        </ul>
+        <ul class="header__authors">
+            <a href="https://t.me/nsamariddinov"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAiJJREFUSEvt1UuoTXEUx/HP9UgJeRsYYYBQkkRJlMgrIjGQVyZ0R2ImEymKlEiRiZLII2VCGYoyMFGYyMyzKAPkudftT9u+Z599jnOOO7mr9mDv/9r/73+t9Vvr36WPrKuPuPrBncr8JKzEeXwOSCdTPQSbsB1LUkR7caJT4HnYhi0YUUjhHpxpJ3g0tmInZtWp1wI8aBU8EMuxA+swKAd8jYM4hcHp+zcMw5d/BU/GrhThxEJ0P3EWR3EFc3PrDxFl6LFGxTUUG1MqF5Wk8klaf4m7mFLwO43uRsFRk6hbqHN4CfATDmVpPIYZuINxNXxDcBfqgcfnhDK9orEDsjvzf46luInITi2bhme1wGNwEpsxoAL4BtGTF5Nf9GoMh7L/PmBUfs98jTfgUk6FZewA7Mf75HAgpbreWSMz0QF/rCiukPsqrMUKjMz5/hZPTx+m6M4lDVQkyGHEAUvB+bXoy8VYnanxXWqRr8kh6ng5rVVBY31N1lq3GgWXbRhT6nahR6vgIdi3rYKvYX0VKbf+AnE7/WWNDpD8T/cxvwlwTLCYAy2Dn2bqn9oEeF82fI63A/wqu9om4HuKZGa6EMp6eCHutQP8IwPFE7P7RtowNr+aDpRnhF+0aIzVllIdbfQxQa8X9hqbJtmy3PdHmFOrLM2KK+7WqO/jOjWOmh7Jplnc11HbeO9lzYIb1dTsNP3iKozh89/AlQfsVMT94F4Z+AUoPVAfAgKGRQAAAABJRU5ErkJggg=="/></a>
+            <a href="https://instagram.com/samariddinov_n"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAwhJREFUSEvllknoT1EUxz9/YxmKIvOQDFFmNmQIO0RSLMxiYWeIEjIkCrFRFmZZWBgybSgZisyJSCxkSiky7Qznq/P0uu597/1sKLd+vfrde8/3nu/5nqGOv7Tq/hIu/zxwO6A7UL+Eoa/AE+B1GZNFHrcFtgDjgZZlhoL9d8AZYHnqESlggR0x4KZu8DNwB5BHRasRMAho7Ic+AdOAs+GlGHAT4Ckgj/fZdxdwqwJoZrsBMAJY599XQA/z/ksePAasC2vc4+k1UqzjMw1Udg8CF4DR/oi1ZcAvgA7u8ZsagQUqQK25Hp67wEugYxGw6JUiH5nHvROgetQkYBjwHbgKHPd7s4ADfm+eh+oj0AxoDbzNbIZUSxiK5xWPT4i90IxsBZoHGx+AxcBeYI5Tfd8y4obrpRvQF9B/P1cILFFc8lSYEBhf6qAC2QHcBhoC/RxUXglce/l1z0HFkNiJAo8Dzjl1U3K3B/rrRdVgj1neeGd/iJgQaw9ym4pxf2dQTBYCHzVapuYur7d0Wg0sAbYnYr8C2AysMiY25s6IGT18JHA5BTwWOB/x+BQg6vVTRYotMaQHh4+WZsSC0upiClibyr3TJrKJOesnXMlS88kagSWwIaadMW47SnUGLOMCyZYKigrLMlP0tgTwSqdY3025MzddF6NcuIXAocedPLdV9gZExNXFi4XKZa+gMVQS13DPYcUxTKdFVgR2mtcq/EoZeaKmIMUqjVTjF1iF2h0wIoX3MW0M9TtRj6U+qTBVQGRYVMcKiBS/JxIGNRwVED1QOR0FVj19bnX2GdA1EUuVzMmW72JHbfKaFZFjib5bz7uS2qTCpT4QBdaE8d5ra/sqk0TicdnfUrNUrfC0yLfWWFtUjOZbDz1sY8yMEsNl21lbVF9X0/i1YsCtgMc+7mhy2ABctx79rQzF97NBQPcUDo1BPfOdSedSo89si/H+HNCfjj4yoVZ5KHx00bCn2iqlqoJJJLUssaNaoAxQt/ttVZmr2xQMBanHPAQKp5cqwLV4Wvns/wf8A/yioB/UQ80fAAAAAElFTkSuQmCC"/></a>
+        </ul>
+    </div>
+    <div class="container hide"></div>
+    <div class="footer hide">
+        <h4 class="header__logo">
+            Jadidchilik
+        </h4>
+        <ul class="footer__ul">
+            <li class="header__ul--li">Jadidlar</li>
+            <li class="header__ul--li">Ahamiyati</li>
+            <li class="header__ul--li">Biografiyasi</li>
+            <li class="header__ul--li">Yakunlanishi</li>
+        </ul>
+        <ul class="footer__authors">
+            <a href="https://t.me/nsamariddinov"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAiJJREFUSEvt1UuoTXEUx/HP9UgJeRsYYYBQkkRJlMgrIjGQVyZ0R2ImEymKlEiRiZLII2VCGYoyMFGYyMyzKAPkudftT9u+Z599jnOOO7mr9mDv/9r/73+t9Vvr36WPrKuPuPrBncr8JKzEeXwOSCdTPQSbsB1LUkR7caJT4HnYhi0YUUjhHpxpJ3g0tmInZtWp1wI8aBU8EMuxA+swKAd8jYM4hcHp+zcMw5d/BU/GrhThxEJ0P3EWR3EFc3PrDxFl6LFGxTUUG1MqF5Wk8klaf4m7mFLwO43uRsFRk6hbqHN4CfATDmVpPIYZuINxNXxDcBfqgcfnhDK9orEDsjvzf46luInITi2bhme1wGNwEpsxoAL4BtGTF5Nf9GoMh7L/PmBUfs98jTfgUk6FZewA7Mf75HAgpbreWSMz0QF/rCiukPsqrMUKjMz5/hZPTx+m6M4lDVQkyGHEAUvB+bXoy8VYnanxXWqRr8kh6ng5rVVBY31N1lq3GgWXbRhT6nahR6vgIdi3rYKvYX0VKbf+AnE7/WWNDpD8T/cxvwlwTLCYAy2Dn2bqn9oEeF82fI63A/wqu9om4HuKZGa6EMp6eCHutQP8IwPFE7P7RtowNr+aDpRnhF+0aIzVllIdbfQxQa8X9hqbJtmy3PdHmFOrLM2KK+7WqO/jOjWOmh7Jplnc11HbeO9lzYIb1dTsNP3iKozh89/AlQfsVMT94F4Z+AUoPVAfAgKGRQAAAABJRU5ErkJggg=="/></a>
+            <a href="https://instagram.com/samariddinov_n"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAwhJREFUSEvllknoT1EUxz9/YxmKIvOQDFFmNmQIO0RSLMxiYWeIEjIkCrFRFmZZWBgybSgZisyJSCxkSiky7Qznq/P0uu597/1sKLd+vfrde8/3nu/5nqGOv7Tq/hIu/zxwO6A7UL+Eoa/AE+B1GZNFHrcFtgDjgZZlhoL9d8AZYHnqESlggR0x4KZu8DNwB5BHRasRMAho7Ic+AdOAs+GlGHAT4Ckgj/fZdxdwqwJoZrsBMAJY599XQA/z/ksePAasC2vc4+k1UqzjMw1Udg8CF4DR/oi1ZcAvgA7u8ZsagQUqQK25Hp67wEugYxGw6JUiH5nHvROgetQkYBjwHbgKHPd7s4ADfm+eh+oj0AxoDbzNbIZUSxiK5xWPT4i90IxsBZoHGx+AxcBeYI5Tfd8y4obrpRvQF9B/P1cILFFc8lSYEBhf6qAC2QHcBhoC/RxUXglce/l1z0HFkNiJAo8Dzjl1U3K3B/rrRdVgj1neeGd/iJgQaw9ym4pxf2dQTBYCHzVapuYur7d0Wg0sAbYnYr8C2AysMiY25s6IGT18JHA5BTwWOB/x+BQg6vVTRYotMaQHh4+WZsSC0upiClibyr3TJrKJOesnXMlS88kagSWwIaadMW47SnUGLOMCyZYKigrLMlP0tgTwSqdY3025MzddF6NcuIXAocedPLdV9gZExNXFi4XKZa+gMVQS13DPYcUxTKdFVgR2mtcq/EoZeaKmIMUqjVTjF1iF2h0wIoX3MW0M9TtRj6U+qTBVQGRYVMcKiBS/JxIGNRwVED1QOR0FVj19bnX2GdA1EUuVzMmW72JHbfKaFZFjib5bz7uS2qTCpT4QBdaE8d5ra/sqk0TicdnfUrNUrfC0yLfWWFtUjOZbDz1sY8yMEsNl21lbVF9X0/i1YsCtgMc+7mhy2ABctx79rQzF97NBQPcUDo1BPfOdSedSo89si/H+HNCfjj4yoVZ5KHx00bCn2iqlqoJJJLUssaNaoAxQt/ttVZmr2xQMBanHPAQKp5cqwLV4Wvns/wf8A/yioB/UQ80fAAAAAElFTkSuQmCC"/></a>
+            <p>Nurmuhammad Samariddinov</p>
+        </ul>
+        <ul class="footer__lastUl">
+            <li class="theLastUl__li"></li>
+        </ul>
+    </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

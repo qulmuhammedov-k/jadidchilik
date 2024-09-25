@@ -1,0 +1,30 @@
+/* Barcha elementlar uchun umumiy stil */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Loading screen uchun stil */
+#loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    flex-direction: column;
+}
+
+/* Video element uchun stil */
+#countdown-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
